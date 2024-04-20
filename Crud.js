@@ -8,11 +8,11 @@ const ViewL = () => {
     lists.map((items)=>{
         return (
             tbl += `
-                    <div class = "d-flex">
-                        <div class="w-25 bg-white p-4 my-4 rounded-3 shadow">
+                    <div class = "col-3 px-3">
+                        <div class="w-100 bg-white p-4 my-4 rounded-3 shadow">
                             <h4 class="fsw-bold fs-2">${items.title}</h4>
                             <h4 class="fst-italic text-secondary fs-5 py-2">${items.tasks}</h4>
-                            <button onclick="Del("${items.id}")">x</button>
+                            <button onclick="Del("${items.id}")" class="bg-warning text-white border-0 rounded-circle h-15 w-15">x</button>
                         </div>
                     </div>
                  `
@@ -61,6 +61,7 @@ const Del = (id) => {
     let  del = lists.filter((x)=>
     {
         x.id != id;
+        return false;
 
     });
     localStorage.setItem('Keeper',JSON.stringify(del));

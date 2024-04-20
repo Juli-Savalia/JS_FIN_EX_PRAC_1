@@ -11,6 +11,12 @@
         .bg-grey {
             background-color: #eeeeee;
         }
+        .w-15{
+            width: 35px;
+        }
+        .h-15{
+            height: 35px;
+        }
     </style>
 </head>
 
@@ -25,19 +31,20 @@
 
     <section>
         <div class="container">
-            <div class="row gap-4">
+            <div class="row gap-3">
                 <div class="col-12 pt-5">
                     <div class="bg-white p-5 w-50 mx-auto rounded-3 shadow">
                         <form>
                             <input type="text" class="border-0" id="title" placeholder="Tile.."><br><br>
-                            <textarea id="tasks" class="border-0" cols="30" rows="10"
+                            <textarea id="tasks" class="border-0" cols="30" rows="2"
                                 placeholder="Add Your Tasks"></textarea>
-                            <button onclick="add()">+</button>
+                                <br><br>
+                            <button onclick="add()" class="rounded-pill bg-warning px-5 py-2 text-white border-0">+</button>
                         </form>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div id="categories">
+                    <div id="categories" class="d-flex col-12">
 
                     </div>
                 </div>
